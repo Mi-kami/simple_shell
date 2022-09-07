@@ -6,7 +6,7 @@
  * (e.g. "ls" if user typed "ls -l")
  * @env: environmental variable
  *
- * Return: a copy of fleshed out command (e.g. "/bin/ls" if originally "ls")
+ * Return: a copy of fleshed out command
  */
 
 char *_which(char *str, list_t *env)
