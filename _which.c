@@ -2,10 +2,13 @@
 
 /**
  * _which - fleshes out command by appending it to a matching PATH directory
- * @str: first command user typed into shell (e.g. "ls" if user typed "ls -l")
+ * @str: first command user typed into shell (e.g. "ls" if user
+ * typed "ls -l")
  * @env: environmental variable
+ *
  * Return: a copy of fleshed out command (e.g. "/bin/ls" if originally "ls")
  */
+
 char *_which(char *str, list_t *env)
 {
 	char *pth, *cat = NULL, **toks;
@@ -15,7 +18,6 @@ char *_which(char *str, list_t *env)
 	pth = get_env("PATH", env);
 	toks = c_str_tok(pth, ":");
 	free(pth);
-
 	/* append "/cmd" to each token to see it's legit */
 	i = 0;
 	while (toks[i] != NULL)
